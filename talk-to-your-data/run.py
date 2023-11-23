@@ -13,14 +13,14 @@ from langchain.chains import RetrievalQA
 
 from langchain.embeddings.cohere import CohereEmbeddings
 
-os.environ["COHERE_API_KEY"] = "tSG71Zar4nagDNPsDyjEV6xCnhk5iuDNV9DeQKxu"
+os.environ["COHERE_API_KEY"] = "XXXXXXXXX"
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 openai.api_type = "azure"
-openai.api_base = "https://conversation-ai-gpt-model.openai.azure.com/"
+openai.api_base = "https://XXXXXXX.openai.azure.com/"
 openai.api_version = "2023-07-01-preview"
-OPENAI_API_KEY="8b67edf9296d417fb66e00260d1e4b82"
+OPENAI_API_KEY="XXXXXXX"
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
@@ -74,8 +74,8 @@ def get_faiss_vectordb(file: str):
 ##########
 def run_llm(vectordb, query: str) -> str:
     # Create an instance of the ChatOpenAI with specified settings.
-    openai_llm = AzureChatOpenAI(deployment_name="rematgpt-model",
-                                openai_api_base="https://conversation-ai-gpt-model.openai.azure.com/",
+    openai_llm = AzureChatOpenAI(deployment_name="MODEL_NAME",
+                                openai_api_base="https://XXXXXXX.openai.azure.com/",
                                 openai_api_version="2023-05-15",
                                 openai_api_key=OPENAI_API_KEY,
                                 openai_api_type="azure",
