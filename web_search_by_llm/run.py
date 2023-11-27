@@ -5,12 +5,12 @@ from langchain.retrievers.web_research import WebResearchRetriever
 
 import os
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAx6NDUwOcRg1ZGznsMzaWHQTxp31OiozM" # Get it at https://console.cloud.google.com/apis/api/customsearch.googleapis.com/credentials
-os.environ["GOOGLE_CSE_ID"] = "2583ecf2f2db846ab" # Get it at https://programmablesearchengine.google.com/
+os.environ["GOOGLE_API_KEY"] = "XXXXXXXXXXXXXXX" # Get it at https://console.cloud.google.com/apis/api/customsearch.googleapis.com/credentials
+os.environ["GOOGLE_CSE_ID"] = "XXXXXXXXXXXXXXX" # Get it at https://programmablesearchengine.google.com/
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-OPENAI_API_KEY="8b67edf9296d417fb66e00260d1e4b82"
+OPENAI_API_KEY="XXXXXXXXXXXXXXX"
 
 st.set_page_config(page_title="Interweb Explorer", page_icon="🌐")
 
@@ -29,8 +29,8 @@ def settings():
 
     # LLM
     from langchain.chat_models import AzureChatOpenAI
-    llm = AzureChatOpenAI(deployment_name="rematgpt-model",
-                                openai_api_base="https://conversation-ai-gpt-model.openai.azure.com/",
+    llm = AzureChatOpenAI(deployment_name="XXXXXXXXXXXXXXX-model",
+                                openai_api_base="https://XXXXXXXXXXXXXXX.openai.azure.com/",
                                 openai_api_version="2023-05-15",
                                 openai_api_key=OPENAI_API_KEY,
                                 openai_api_type="azure",
