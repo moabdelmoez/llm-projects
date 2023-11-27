@@ -1,4 +1,4 @@
-# [LLM Projects] README
+# LLM Projects
 
 ## Installation
 
